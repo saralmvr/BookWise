@@ -5,7 +5,7 @@ const STORAGE_KEY = 'shelfbox_v2';
 /** @returns {AppState} o coiso padrao */
 function defaultState() {
   return {
-    books: [],       // Array de BookObj
+    books: [],       
     profile: {
       name: 'Leitor(a)',
       bio: 'Apaixonado(a) por livros e histórias.',
@@ -341,7 +341,7 @@ function renderHeroStack() {
   ).join('');
 }
 
-let _editingId = null; // null = novo livro
+let _editingId = null; 
 
 function openAddModal() {
   _editingId = null;
@@ -462,7 +462,6 @@ function initStarRating() {
   });
 }
 
-/** Define a nota visual */
 function setStarRating(value) {
   highlightStars(value, 'active');
   document.getElementById('bookRating').value = value;
@@ -726,25 +725,25 @@ function seedDemoData() {
   const demo = [
     {
       id: uid(), title: 'Dom Casmurro', author: 'Machado de Assis', year: '1899',
-      cover: 'https://covers.openlibrary.org/b/id/8226198-M.jpg',
-      status: 'read', rating: 5, review: 'Uma obra-prima da literatura brasileira. A narrativa de Bentinho é envolvente e o questionamento sobre Capitu permanece como um dos maiores enigmas da ficção.',
+      cover: 'https://m.media-amazon.com/images/I/81XpG2iKTlL._AC_UF1000,1000_QL80_.jpg',
+      status: 'read', rating: 5, review: 'Uma obra-prima da literatura brasleira. A narrativa de Bentinho é envolvente e o questionamento sobre Capitu permanece como um dos maiores enigmas da ficção.',
       favorite: true, readDate: '2024-03-15', createdAt: new Date(Date.now() - 9e6).toISOString()
     },
     {
-      id: uid(), title: 'O Senhor dos Anéis', author: 'J.R.R. Tolkien', year: '1954',
-      cover: 'https://covers.openlibrary.org/b/id/8743220-M.jpg',
-      status: 'read', rating: 5, review: 'Uma jornada épica e inesquecível. A construção de mundo de Tolkien é incomparável.',
+      id: uid(), title: 'Os Sete Maridos de Evelyn Hugo', author: 'Taylor Jenkins Reid', year: '2014',
+      cover: 'https://m.media-amazon.com/images/I/91aRbGB8IFL._UF1000,1000_QL80_.jpg',
+      status: 'read', rating: 5, review: 'Um drama emocionante sobre fama, amor e segredos narrado pela voz inesquecível de uma estrela de Hollywood.',
       favorite: true, readDate: '2024-01-20', createdAt: new Date(Date.now() - 8e6).toISOString()
     },
     {
-      id: uid(), title: '1984', author: 'George Orwell', year: '1949',
-      cover: 'https://covers.openlibrary.org/b/id/8575708-M.jpg',
-      status: 'read', rating: 5, review: 'Distopia perturbadora e extremamente relevante. Orwell foi profético.',
+      id: uid(), title: 'O Pequeno Príncipe', author: ' Antoine de Saint-Exupéry', year: '1943',
+      cover: 'https://upload.wikimedia.org/wikipedia/pt/4/47/O-pequeno-pr%C3%ADncipe.jpg',
+      status: 'read', rating: 5, review: 'Uma fábula simples e profunda que convida à reflexão sobre amizade, amor e o sentido da vida.',
       favorite: true, readDate: '2024-02-10', createdAt: new Date(Date.now() - 7e6).toISOString()
     },
     {
       id: uid(), title: 'Cem Anos de Solidão', author: 'Gabriel García Márquez', year: '1967',
-      cover: 'https://covers.openlibrary.org/b/id/8290680-M.jpg',
+      cover: 'https://m.media-amazon.com/images/I/817esPahlrL.jpg',
       status: 'read', rating: 4, review: 'O realismo mágico de García Márquez é de arrepiar. Uma saga familiar que transcende o tempo.',
       favorite: false, readDate: '2023-12-05', createdAt: new Date(Date.now() - 6e6).toISOString()
     },
@@ -761,14 +760,14 @@ function seedDemoData() {
       favorite: false, readDate: null, createdAt: new Date(Date.now() - 4e6).toISOString()
     },
     {
-      id: uid(), title: 'A Revolução dos Bichos', author: 'George Orwell', year: '1945',
-      cover: 'https://covers.openlibrary.org/b/id/8225266-M.jpg',
-      status: 'read', rating: 4, review: 'Alegoria política brilhante, leitura rápida e impactante.',
+      id: uid(), title: 'Vidas Secas', author: 'Graciliano Ramos', year: '19',
+      cover: 'https://m.media-amazon.com/images/I/81XpG2iKTlL._AC_UF1000,1000_QL80_.jpg',
+      status: 'read', rating: 4, review: 'Um retrato poderoso e comovente da luta pela sobrevivência no sertão brasileiro.',
       favorite: false, readDate: '2023-11-12', createdAt: new Date(Date.now() - 3e6).toISOString()
     },
     {
-      id: uid(), title: 'Sapiens', author: 'Yuval Noah Harari', year: '2011',
-      cover: 'https://covers.openlibrary.org/b/id/8406786-M.jpg',
+      id: uid(), title: 'Babel', author: 'R. F. Kuang', year: '2008',
+      cover: 'https://m.media-amazon.com/images/I/91qj5Ot97bL._AC_UF1000,1000_QL80_.jpg',
       status: 'want', rating: 0, review: '',
       favorite: false, readDate: null, createdAt: new Date(Date.now() - 2e6).toISOString()
     },
