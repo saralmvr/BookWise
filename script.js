@@ -743,7 +743,7 @@ function seedDemoData() {
     },
     {
       id: uid(), title: 'Cem Anos de Solidão', author: 'Gabriel García Márquez', year: '1967',
-      cover: 'https://m.media-amazon.com/images/I/817esPahlrL.jpg',
+      cover: 'https://covers.openlibrary.org/b/id/12627383-M.jpg',
       status: 'read', rating: 4, review: 'O realismo mágico de García Márquez é de arrepiar. Uma saga familiar que transcende o tempo.',
       favorite: false, readDate: '2023-12-05', createdAt: new Date(Date.now() - 6e6).toISOString()
     },
