@@ -2,10 +2,10 @@
 
 const STORAGE_KEY = 'shelfbox_v2';
 
-@returns {AppState} 
+/** @returns {AppState} o coiso padrao */
 function defaultState() {
   return {
-    books: [],       
+    books: [],       // Array de BookObj
     profile: {
       name: 'Leitor(a)',
       bio: 'Apaixonado(a) por livros e histórias.',
